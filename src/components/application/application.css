@@ -1,0 +1,28 @@
+.application{
+    padding: 7rem 0 2rem;
+    column-gap: 6rem;
+    /* background-color: var(--body-color); */
+}
+.application .svg-img{
+    width: 470px;
+    order: 0;
+}
+.application .apps-data{
+    order: 1;
+}
+.app-title{
+    font-size: 1.8rem;
+    color:var(--title-color);
+    margin-bottom: var(--mb-1);
+    font-weight: 600;
+    line-height: 1.5;
+}
+.app-description{
+    color:var(--text-color);
+}
+.apps-data .app-buttons{
+    margin-top: 2rem;
+}
+.app-buttons .btn{
+    margin-right: 20px;
+}

@@ -1,0 +1,21 @@
+.about{
+    padding:8rem 0 2rem;
+    column-gap: 6rem;
+}
+.about .svg-img{
+    order:0;
+    width: 470px;
+}
+.about-data{
+    order:1;
+}
+.about-title{
+    font-size: 1.8rem;
+    color:var(--title-color);
+    margin-bottom: var(--mb-1);
+    font-weight: 600;
+    line-height: 1.5;
+}
+.about-description{
+    color:var(--text-color);
+}
