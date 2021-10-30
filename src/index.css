@@ -45,11 +45,12 @@
   outline: none;
   font-family:var(--body-font);
 }
-body{
+.App{
   transition: 0.5s ease-in-out;
   background-color: var(--body-color);
 }
-body.dark{
+
+.App.dark{
   --first-color-light: hsl(var(--hue), var(--sat), 75%);
   --title-color: hsl(var(--hue), 4%, 95%);
   --text-color: hsl(var(--hue), 4%, 80%);
@@ -58,7 +59,7 @@ body.dark{
   --scroll-bar-color: hsl(var(--hue), 4%, 32%);
   --scroll-thumb-color: hsl(var(--hue), 4%, 24%);
 }
-.dark .footer{
+.App.dark .footer{
   background-color: var(--container-color);
 }
 a{

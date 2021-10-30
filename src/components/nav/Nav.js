@@ -1,28 +1,22 @@
-import React, {useEffect, useState } from 'react';
-import {Link , animateScroll as scroll} from 'react-scroll'; 
+import React, {useState, useContext} from 'react';
+import {Link , animateScroll as scroll} from 'react-scroll';
+import { ThemeContext } from '../../context'; 
 import './nav.css';
 const Nav = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
-    const [theme, setTheme] = useState(false);
 
+    const theme = useContext(ThemeContext);
+    // const darkMode = theme.state.darkMode;
     const closeMenu = () => {
         setToggleMenu(false);
     }
-    // console.log(theme)
     const changeTheme = () => {
-        // console.log(theme);
-        // console.log(theme);
-        setTheme(!theme);
-        if(theme){
-            document.body.classList.add('dark');
-        }else{
-            document.body.classList.remove('dark');
-        }
+        theme.dispatch({ type: "TOGGLE"})
     }
     return (
         <div className="navbar">
             <nav className="nav container">
-                <a href="#" className="nav-logo" onClick={() => scroll.scrollToTop()}>Delivery</a>
+                <div className="nav-logo" onClick={() => scroll.scrollToTop()}>Delivery</div>
                 <ul className={ toggleMenu ? "nav-items active" : "nav-items"}>
                     <li className="nav-item">
                         <Link activeClass="active" to="home" spy={true} smooth={true} duration={1000} className="nav-link" onClick={closeMenu}>
@@ -44,12 +38,12 @@ const Nav = () => {
                             Contact Us
                         </Link>
                     </li>
-                    {toggleMenu && <a href="#" className="btn">Order Now!</a> }
+                    {toggleMenu && <a href="/" className="btn">Order Now!</a> }
                 </ul>
 
                 <div className="theme-toggler" onClick={changeTheme}></div>
                 <div className={ toggleMenu ? "ham-menu active" : "ham-menu"} onClick={() => setToggleMenu(!toggleMenu)}></div>
-                <a href="#" className="btn">Order Now!</a>
+                <a href="/" className="btn">Order Now!</a>
             </nav>
         </div>
     )

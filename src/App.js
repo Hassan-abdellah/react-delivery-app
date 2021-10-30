@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState , useContext} from "react";
 import About from "./components/about/About";
 import Application from "./components/application/Application";
 import Contact from "./components/contact/Contact";
@@ -8,8 +8,12 @@ import Nav from "./components/nav/Nav";
 import ScrollToTop from "./components/scrollBtn/ScrollToTop";
 import Security from "./components/security/Security";
 import Services from "./components/services/Services";
+import { ThemeContext } from "./context";
 
 function App() {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+  // const [theme, setTheme] = useState(false);
   const [scrollBtn , setScrollBtn] = useState(false);
   
   const showScrollBtn = () => {
@@ -20,8 +24,9 @@ function App() {
     }
   }
   window.addEventListener('scroll', showScrollBtn);
+ 
   return (
-    <>
+    <div className={darkMode ? "App dark" : 'App' }>
       <Nav/>
       <Home/>
       <About/>
@@ -31,7 +36,7 @@ function App() {
       <Contact/>
       <Footer/>
       <ScrollToTop scrollBtn={scrollBtn}/>
-    </>
+    </div>
   );
 }
 

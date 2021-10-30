@@ -29,7 +29,7 @@ const Contact = () => {
                 </li>
             </ul>
             <div className="contact-btn">
-                <a href="#" className="btn">Contact Us</a>
+                <a href="/" className="btn">Contact Us</a>
             </div>
         </div>
     )

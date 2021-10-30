@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <div className="home container grid" id="home">
             <svg className="svg-img" viewBox="0 0 554 325" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0)">
+                <g clipPath="url(#clip0)">
                 <path d="M505.712 156.064H423.293V219.381H505.712V156.064Z" fill="#F5F5F5"/>
                 <path d="M485.066 218.931C485.179 218.931 485.271 204.819 485.271 187.411C485.271 170.003 485.179 155.891 485.066 155.891C484.952 155.891 484.86 170.003 484.86 187.411C484.86 204.819 484.952 218.931 485.066 218.931Z" fill="#EBEBEB"/>
                 <path d="M498.716 204.964H492.401V212.082H498.716V204.964Z" fill="#FAFAFA"/>
@@ -495,7 +495,7 @@ const Home = () => {
                 <p className="home-description">
                     Order your favorite foods at any time and we will deliver them right to where you are.
                 </p>
-                <a href="#" className="btn">Get Started</a>
+                <a href="/" className="btn">Get Started</a>
             </div>
         </div>
     )
